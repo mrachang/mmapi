@@ -39,7 +39,7 @@ public class MessageHandler {
 		JSONObject message = new JSONObject();
 		message.put("type", "message");
 		message.put("label","回應我");
-		message.put("text", "你好");
+		message.put("text", "你好嗎");
 		messages.put(message);
 		body.put("replyToken", replyToken);
 		body.put("messages", messages);
