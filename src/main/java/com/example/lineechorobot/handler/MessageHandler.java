@@ -38,8 +38,7 @@ public class MessageHandler {
 		JSONArray messages = new JSONArray();
 		JSONObject message = new JSONObject();
 		message.put("type", "text");
-		message.put("label","回應我");
-		message.put("text", "你好嗎");
+		message.put("text", text);
 		messages.put(message);
 		body.put("replyToken", replyToken);
 		body.put("messages", messages);
