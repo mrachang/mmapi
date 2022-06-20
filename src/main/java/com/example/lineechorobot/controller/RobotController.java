@@ -34,7 +34,12 @@ public class RobotController {
 	private MessageHandler messageHandler;
 	@GetMapping("/")
 	public ResponseEntity test() {
-		return new ResponseEntity("你好", HttpStatus.OK);
+		return new ResponseEntity(
+			<html>
+			<head>
+			你好
+			</head><body>嗨</body></html>
+			, HttpStatus.OK);
 	}
 
 	@PostMapping("/callback")
