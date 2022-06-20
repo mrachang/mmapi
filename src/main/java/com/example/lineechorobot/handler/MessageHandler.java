@@ -39,6 +39,9 @@ public class MessageHandler {
 		JSONObject message = new JSONObject();
 		message.put("type", "text");
 		message.put("text", text);
+		message.put("size", "xl");
+		message.put("weight", "bold");
+		message.put("color", "#0000ff");
 		messages.put(message);
 		body.put("replyToken", replyToken);
 		body.put("messages", messages);
