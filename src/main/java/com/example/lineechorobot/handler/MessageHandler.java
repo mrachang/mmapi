@@ -37,7 +37,7 @@ public class MessageHandler {
 		JSONObject body = new JSONObject();
 		JSONArray messages = new JSONArray();
 		JSONObject message = new JSONObject();
-		message.put("type", "text","sticker");
+		message.put("type", "text";"stick");
 		message.put("text", "你好");
 		message.put("packageId", 446);
 		message.put("stickerId", 1988);
