@@ -24,7 +24,8 @@ public class MessageHandler {
 	public void doAction(JSONObject event) {
 		switch (event.getJSONObject("message").getString("type")) {
 		case "text":
-			text(event.getString("replyToken"), event.getJSONObject("message").getString("text"));
+			text(event.getString("replyToken"), event.getJSONObject("message").getString("text"), event.getJSONObject("message").getString("packageId"),
+					event.getJSONObject("message").getString("stickerId"));
 			break;
 		case "sticker":
 			sticker(event.getString("replyToken"), event.getJSONObject("message").getString("packageId"),
@@ -37,8 +38,8 @@ public class MessageHandler {
 		JSONObject body = new JSONObject();
 		JSONArray messages = new JSONArray();
 		JSONObject message = new JSONObject();
-		message.put("type", "text","text");
-		message.put("text", "你好","請問有什麼事嗎?);
+		message.put("type", "text","packageId","stickerId);
+		message.put("text", "你好","446","1988");
 		messages.put(message);
 		body.put("replyToken", replyToken);
 		body.put("messages", messages);
