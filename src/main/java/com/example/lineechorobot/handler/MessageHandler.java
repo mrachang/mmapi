@@ -38,7 +38,8 @@ public class MessageHandler {
 		JSONArray messages = new JSONArray();
 		JSONObject message = new JSONObject();
 		message.put("type", "text");
-		message.put("text", "您好");
+		message.put("text", "$ LINE emoji $");
+		message.put("emojis", "001");
 		messages.put(message);
 		body.put("replyToken", replyToken);
 		body.put("messages", messages);
