@@ -24,7 +24,9 @@ public class MessageHandler {
 	public void doAction(JSONObject event) {
 		switch (event.getJSONObject("message").getString("type")) {
 		case "text":
-			text(event.getString("replyToken"), event.getJSONObject("message").getString("text").getString("packageId").getString("stickerId"));
+			text(event.getString("replyToken"), event.getJSONObject("message").getString("text"),
+			     		event.getJSONObject("message").getString("packageId"),
+			    		event.getJSONObject("message").getString("stickerId"));
 			break;
 		case "sticker":
 			sticker(event.getString("replyToken"), event.getJSONObject("message").getString("packageId"),
