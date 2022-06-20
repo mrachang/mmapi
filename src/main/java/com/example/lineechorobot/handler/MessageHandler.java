@@ -34,7 +34,7 @@ public class MessageHandler {
 		}
 	}
 
-	private void text(String replyToken, String text) {
+	private void text(String replyToken, String text, String packageId, String stickerId) {
 		JSONObject body = new JSONObject();
 		JSONArray messages = new JSONArray();
 		JSONObject message = new JSONObject();
