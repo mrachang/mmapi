@@ -37,7 +37,7 @@ public class RobotController {
 		return new ResponseEntity("Hello J A V A!!", HttpStatus.OK);
 	}
 
-	@PostMapping("/messaging")
+	@PostMapping("/callback")
 	public ResponseEntity messagingAPI(@RequestHeader("X-Line-Signature") String X_Line_Signature,
 			@RequestBody String requestBody) throws UnsupportedEncodingException, IOException {
 		if (checkFromLine(requestBody, X_Line_Signature)) {
