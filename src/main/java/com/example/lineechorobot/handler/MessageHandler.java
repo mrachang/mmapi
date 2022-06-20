@@ -33,13 +33,15 @@ public class MessageHandler {
 		}
 	}
 
-	private void text(String replyToken, String text) {
+	private void text(String replyToken, String text,String packageId,String stickerId) {
 		JSONObject body = new JSONObject();
 		JSONArray messages = new JSONArray();
 		JSONObject message = new JSONObject();
 		message.put("type", "text");
-		message.put("text", "你好")
-		message.put("text", "有什麼事嗎?")
+		message.put("text", "你好");
+		message.put("text", "有什麼事嗎?");
+		message.put("packageId", "446");
+		message.put("stickerId", "1988");
 		messages.put(message);
 		body.put("replyToken", replyToken);
 		body.put("messages", messages);
