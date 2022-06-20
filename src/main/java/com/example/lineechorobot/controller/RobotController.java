@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.lineechorobot.handler.MessageHandler;
 
-@RequestMapping("/robot")
+@RequestMapping("/")
 @RestController
 public class RobotController {
 
