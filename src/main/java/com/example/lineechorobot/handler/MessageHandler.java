@@ -38,8 +38,10 @@ public class MessageHandler {
 		JSONObject body = new JSONObject();
 		JSONArray messages = new JSONArray();
 		JSONObject message = new JSONObject();
-		message.put("type", "text","packageId","stickerId);
-		message.put("text", "你好","446","1988");
+		message.put("type", "text");
+		message.put("text", "你好");
+		message.put("packageId","446");
+		message.put("stickerId","1988");
 		messages.put(message);
 		body.put("replyToken", replyToken);
 		body.put("messages", messages);
