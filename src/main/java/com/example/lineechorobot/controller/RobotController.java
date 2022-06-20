@@ -32,7 +32,7 @@ public class RobotController {
 	
 	@Autowired
 	private MessageHandler messageHandler;
-	@GetMapping("/test")
+	@GetMapping("/")
 	public ResponseEntity test() {
 		return new ResponseEntity("Hello J A V A!!", HttpStatus.OK);
 	}
